@@ -74,11 +74,19 @@ function VectorDBInterface() {
                     <div style={{ marginBottom: '30px' }}>
                         <Input
                             type="number"
-                            value={dimensions}
-                            onChange={(e) => setDimensions(parseInt(e.target.value) || 3)}
+                            value={dimensions === '' ? '' : dimensions}
+                            onChange={(e) => {
+                                const val = e.target.value;
+                                if (val === '' || val === undefined) {
+                                    setDimensions('');
+                                } else {
+                                    setDimensions(parseInt(val) || '');
+                                }
+                            }}
                             min="1"
                             max="2048"
                             label="벡터 차원 선택:"
+                            placeholder="예: 3"
                             style={{ 
                                 width: '120px',
                                 textAlign: 'center',

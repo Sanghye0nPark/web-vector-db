@@ -110,11 +110,19 @@ function VectorAdd() {
                         }}>
                             <Input
                                 type="number"
-                                value={randomCount}
-                                onChange={(e) => setRandomCount(parseInt(e.target.value) || 5)}
+                                value={randomCount === '' ? '' : randomCount}
+                                onChange={(e) => {
+                                    const val = e.target.value;
+                                    if (val === '' || val === undefined) {
+                                        setRandomCount('');
+                                    } else {
+                                        setRandomCount(parseInt(val) || '');
+                                    }
+                                }}
                                 min="1"
                                 max="100"
                                 label="생성할 벡터 수:"
+                                placeholder="예: 5"
                             />
                             <Input
                                 type="number"
