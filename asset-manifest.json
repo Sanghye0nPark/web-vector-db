@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/web-vector-db/static/css/main.de9be1f6.css",
+    "main.js": "/web-vector-db/static/js/main.fe3ea7fc.js",
+    "index.html": "/web-vector-db/index.html",
+    "main.de9be1f6.css.map": "/web-vector-db/static/css/main.de9be1f6.css.map",
+    "main.fe3ea7fc.js.map": "/web-vector-db/static/js/main.fe3ea7fc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de9be1f6.css",
+    "static/js/main.fe3ea7fc.js"
+  ]
+}
